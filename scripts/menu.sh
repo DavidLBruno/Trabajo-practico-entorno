@@ -11,7 +11,7 @@ do
   case $opcion in
     GENERAR)
       read -p "Ingrese la cantidad de imagenes: " cantidad
-      bash generar.sh $cantidad
+      bash /app/scripts/generar.sh $cantidad
       ;;
     DESCOMPRIMIR)
       read -p "Ingrese archivo comprimido: " archivo 
