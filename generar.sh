@@ -2,19 +2,18 @@
 
 
 # Download image with a for
-mkdir images
+mkdir -p images
 
 if [[ ! -e array.txt ]]
 then
-curl -L https://raw.githubusercontent.com/adalessandro/EdP-2023-TP-Final/main/dict.csv --output array.txt
+	curl -L https://raw.githubusercontent.com/adalessandro/EdP-2023-TP-Final/main/dict.csv --output array.txt
 fi
-
-lines=$(wc -l < ./array.txt)
 
 for i in $(seq 1 "$1")
 do
-	nombre=$(sed -n "$RANDOM%$lines+1"p array.txt)
-  echo $nombre AAAAAA
+	number=$(($RANDOM%$(wc -l < ./array.txt)))
+	nombre=$(sed -n "$number"p array.txt)
+	echo $i $nombre $number AAAAAAAAAA
 	cd images
 	curl -L https://source.unsplash.com/random/900%C3%97700/?person --output "$(echo $nombre | cut -d , -f 1)"
 	cd ..
