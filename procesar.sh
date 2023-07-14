@@ -2,7 +2,7 @@
 
 directorio="images"
 
-cd "$directorio" || exit 1
+cd "$directorio" 
 
 directorio_destino="../imagenesRecortadas"
 mkdir -p "$directorio_destino"
