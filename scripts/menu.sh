@@ -24,7 +24,7 @@ do
       bash procesar.sh
       ;;
     COMPRIMIR)
-      bash procesar.sh
+      bash comprimir.sh
       ;;
     *)
       echo Por causalidad la opcion no es correcta

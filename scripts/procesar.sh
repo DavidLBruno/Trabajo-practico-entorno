@@ -1,8 +1,8 @@
 #!/bin/bash
 
-directorio="images"
+directorio="/app/images"
 
-cd "$directorio" 
+cd "$directorio"
 
 directorio_destino="../imagenesRecortadas"
 mkdir -p "$directorio_destino"
@@ -17,7 +17,6 @@ for archivo in *; do
             echo "Imagen recortada: $archivo_destino"
         else
             echo "Nombre Inválido: $nombre_archivo"
-           
         fi
     fi
 done
