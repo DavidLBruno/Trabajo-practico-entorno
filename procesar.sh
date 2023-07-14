@@ -17,7 +17,7 @@ for archivo in *; do
             echo "Imagen recortada: $archivo_destino"
         else
             echo "Nombre Inválido: $nombre_archivo"
-            exit 1
+           
         fi
     fi
 done
