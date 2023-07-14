@@ -13,7 +13,6 @@ for i in $(seq 1 "$1")
 do
 	number=$(($RANDOM%$(wc -l < ./array.txt)))
 	nombre=$(sed -n "$number"p array.txt)
-	echo $i $nombre $number AAAAAAAAAA
 	cd images
 	curl -L https://source.unsplash.com/random/900%C3%97700/?person --output "$(echo $nombre | cut -d , -f 1)"
 	cd ..

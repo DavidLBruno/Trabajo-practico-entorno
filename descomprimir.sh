@@ -1,17 +1,17 @@
 #!/bin/bash
-
+ 
 archivo=$1
 validacion=$2
 
 echo $archivo $validacion
 
-if [[ !$archivo && !$validacion ]]
+if [[ -z $archivo || -z $validacion ]]
 then
   echo Debe colocar un archivo comprimido y una suma de veirificacion.
   exit 0
 fi
 
-if [[$archivo && $validacion ]]
+if [[ $archivo && $validacion ]]
 then
  echo $archivo debe ser un archivo comprimido.
   exit 0
