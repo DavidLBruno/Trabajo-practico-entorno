@@ -5,8 +5,8 @@ ruta_actual=$PWD
 
 # Verificar si el directorio de imágenes existe
 if [ ! -d "$ruta_actual/imagenes" ]; then
-    echo "El directorio de imágenes no existe."
-    exit 1
+    echo "El directorio de imágenes no existe, entonces fue creado."
+    mkdir -p imagenes
 fi
 
 # Ejecutar el contenedor Docker

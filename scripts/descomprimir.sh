@@ -1,41 +1,30 @@
 #!/bin/bash
  
-archivo=$1
-validacion=$2
+ubicacion_archivo="/app/images.zip"
+ubicacion_verificacion="/app/images.zip.sum"
 
-if [[ -z $archivo || -z $validacion ]]
+echo $ubicacion_archivo
+echo $ubicacion_verificacion
+
+if [[ ! ( -e $ubicacion_archivo || -e $ubicacion_verificacion ) ]]
 then
-	echo Debe colocar al menos dos valores.
-	exit 0
-elif [[ ! -e $archivo ]]
-then
-	echo $archivo Debe existir.
-	exit 0
-elif [[ ! -e $validacion ]]
-then
-	echo $validacion Debe existir.
-	exit 0
-elif [[ $archivo != *.zip ]]
-then
-        echo $archivo debe ser un archivo comprimido.
-        exit 0
-elif [[ $validacion != *.zip.sum ]]
-then
-        echo $validacion debe ser una suma de verificacion.
-	exit 0
+	echo Debe generar las imagenes primero.
+	exit 1
 fi
 
-suma_verificacion=$(cat $validacion | awk '{ print $1 }')
-hash=$(md5sum images.zip | awk '{ print $1 }')
+suma_verificacion=$(cat $ubicacion_verificacion | awk '{ print $1 }')
+hash=$(md5sum $ubicacion_archivo | awk '{ print $1 }')
+
+echo $suma_verificacion
+echo $hash
 
 if [[ "$suma_verificacion" != "$hash" ]]
 then
 	echo La suma de verificacion no coinciden.
-	exit 0
+	exit 1
 fi
 
-unzip $archivo -d ./imagenes-descomprimidas
+unzip $ubicacion_archivo -d ./imagenes-descomprimidas
 echo Archivo descomprimido con exito!
-
 exit 0
 
