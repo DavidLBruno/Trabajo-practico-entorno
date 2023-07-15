@@ -1,6 +1,8 @@
 #!/bin/bash
 PS3='Seleccione --> '
 
+cd scripts
+
 echo Que desea hacer?
 select opcion in "SALIR" "GENERAR" "DESCOMPRIMIR" "PROCESAR" "COMPRIMIR"
 do
@@ -22,7 +24,7 @@ do
       bash procesar.sh
       ;;
     COMPRIMIR)
-      bash procesar.sh
+      bash comprimir.sh
       ;;
     *)
       echo Por causalidad la opcion no es correcta

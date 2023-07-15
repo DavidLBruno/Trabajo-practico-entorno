@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Obtener la ruta actual
+ruta_actual=$PWD
+
+# Verificar si el directorio de imágenes existe
+if [ ! -d "$ruta_actual/imagenes" ]; then
+    echo "El directorio de imágenes no existe."
+    exit 1
+fi
+
+# Ejecutar el contenedor Docker
+sudo docker run -it -v "$ruta_actual/imagenes:/app/images" tp-entorno
+
