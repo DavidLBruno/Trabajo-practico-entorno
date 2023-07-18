@@ -5,6 +5,8 @@ archivo_salida="$directorio/lista_imagenes.txt"
 archivo_verificacion="$directorio/lista_verificado.txt"
 nombre_con_a="$directorio/lista_nombres_a"
 
+cd "$directorio"
+
 # Obtener la lista de nombres de archivos de imágenes en el directorio
 ls -1 "$directorio" > "$archivo_salida"
 echo "Archivo generado: $archivo_salida"
@@ -20,11 +22,11 @@ for archivo in "$directorio"/*; do
 done
 echo "Archivo generado: $archivo_verificacion"
 
-# Generar archivo con la lista de nombres que comienzan con la letra "a"
+# Generar archivo con la lista de nombres que finalizen con la letra "a"
 for archivo in "$directorio"/*; do
     if [[ -f "$archivo" ]]; then
         nombre_archivo=$(basename "$archivo")
-        if [[ $nombre_archivo =~ ^a ]]; then
+        if [[ $nombre_archivo =~ .*a$ ]]; then
             echo "$nombre_archivo" >> "$nombre_con_a"
         fi
     fi
