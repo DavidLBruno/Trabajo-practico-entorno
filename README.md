@@ -31,6 +31,7 @@ Se recortaran solo las imágenes validas en una resolución de 512*512, se toma 
 
 # Opcion 5
 Comprimir las imagenes ya generadas
+
 – genera un archivo con la lista de nombres de todas las imágenes.
 
 – genera un archivo con la lista de nombres válidos.
