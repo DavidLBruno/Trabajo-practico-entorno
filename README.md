@@ -1,4 +1,4 @@
-## Como construir el docker
+# Como construir el docker
 
 sudo docker build -t tp-entorno .
 
@@ -6,25 +6,30 @@ sudo docker build -t tp-entorno .
 
 bash ejecutar_contenedor
 
-## Comando para ejecutar el docker e ingresar al archivo comprimido en caso de que ejecutar no funcione
+# Comando para ejecutar el docker e ingresar al archivo comprimido en caso de que ejecutar no funcione
 
 sudo docker run -it -v /ruta/al/directorio/imagenes:/app/images tp-entorno
 
-# Ejemplo
+## Ejemplo
 
 sudo docker run -it -v /home/mateo/Escritorio/Trabajo-practico-entorno/imagenes:/app/images tp-entorno
 
-# Interactuar con el menu
+## Interactuar con el menu
 
-## Opcion 1
-
+# Opcion 1
 Salir del programa
 
-## Opcion 2
+# Opcion 2
+Generar imagenes deseadas
 
-## Opcion 3
-## Opcion 4
-## Opcion 5
+# Opcion 3
+Descomprimir el archivo generado por la opcion 5
+
+# Opcion 4
+Procesar las imagenes
+
+# Opcion 5
+Comprimir las imagenes ya generadas
 
 
 
