@@ -32,9 +32,12 @@ Se recortaran solo las imágenes validas en una resolución de 512*512, se toma 
 # Opcion 5
 Comprimir las imagenes ya generadas
 – genera un archivo con la lista de nombres de todas las imágenes.
+
 – genera un archivo con la lista de nombres válidos.
+
 – genera un archivo con el total de personas cuyo nombre finaliza con
   la letra a.
+  
 – por último, genera un archivo comprimido que incluya los archivos
   generados en los items anteriores y todas las imágenes.
 
