@@ -26,5 +26,5 @@ hash=$(md5sum /app/images.zip)
 touch /app/images.zip.sum
 echo $hash > /app/images.zip.sum
 
-echo Imagenes generadas correctamente!
+echo Imagenes generadas correctamente! $(ls)
 

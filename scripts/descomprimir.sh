@@ -3,9 +3,6 @@
 ubicacion_archivo="/app/images.zip"
 ubicacion_verificacion="/app/images.zip.sum"
 
-echo $ubicacion_archivo
-echo $ubicacion_verificacion
-
 if [[ ! ( -e $ubicacion_archivo || -e $ubicacion_verificacion ) ]]
 then
 	echo Debe generar las imagenes primero.
@@ -24,7 +21,7 @@ then
 	exit 1
 fi
 
-unzip $ubicacion_archivo -d ./imagenes-descomprimidas
+unzip $ubicacion_archivo -d /app/imagenes-descomprimidas
 echo Archivo descomprimido con exito!
 exit 0
 

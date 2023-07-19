@@ -1,10 +1,16 @@
 #!/bin/bash
 
-directorio="/app/images"
+directorio="/app/imagenes-descomprimidas"
+
+if [[ ! (-e $directorio) ]]
+then
+	echo "Debe decomprimir primero las imagenes"
+fi
+
 
 cd "$directorio"
 
-directorio_destino="../imagenesRecortadas"
+directorio_destino="/app/imagenesRecortadas"
 mkdir -p "$directorio_destino"
 
 for archivo in *; do
