@@ -5,6 +5,7 @@ directorio="/app/imagenes-descomprimidas"
 if [[ ! (-e $directorio) ]]
 then
 	echo "Debe decomprimir primero las imagenes"
+	exit 1
 fi
 
 

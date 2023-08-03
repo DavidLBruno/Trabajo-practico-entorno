@@ -5,7 +5,7 @@ archivo_salida="$directorio/lista_imagenes.txt"
 archivo_verificacion="$directorio/lista_verificado.txt"
 nombre_con_a="$directorio/lista_nombres_a"
 imagenes_desomprimidas="/app/imagenes-descomprimidas" 
-mdkir -p "/app/importante"
+mkdir -p "/app/importante"
 mkdir -p $directorio
 cd "$directorio"
 
